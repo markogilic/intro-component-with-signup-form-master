@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+  --blue: hsl(248, 32%, 49%);
+}
+
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+main {
+  width: min(1440px, 100%);
+  /* aspect-ratio: 16/9; */
+  background: url('images/bg-intro-desktop.png');
+  background-color: var(--primary-red);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3rem;
+}
+h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+input {
+  color: var(--dark-blue);
+  font-weight: 600;
+  padding: 1em;
+  padding-left: 2.5em;
+  border: 1px solid var(--grayish-blue);
+  border-radius: 0.5em;
+}
+
+input:focus {
+  outline: none;
+  border: 1px solid var(--grayish-blue);
+}
+button {
+  cursor: pointer;
+  width: 100%;
+  padding: 1.2em;
+  border-radius: 0.5em;
+  background-color: var(--primary-green);
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-box-shadow: inset 0px -8px 14px -5px hsla(154, 59%, 37%, 1);
+  -moz-box-shadow: inset 0px -8px 14px -5px hsla(154, 59%, 37%, 1);
+  box-shadow: inset 0px -8px 14px -5px hsla(154, 59%, 37%, 1);
+}
+
+button:hover {
+  background-color: hsla(154, 71%, 64%, 1);
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+.price-bar {
+  color: var(--grayish-blue);
+  background-color: var(--blue);
+  margin-bottom: 1.5rem;
+  padding: 1.2em 0;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.price-bar span {
+  color: #fff;
+  font-weight: 600;
+}
+.login-wrap {
+  display: flex;
+
+  gap: 1rem;
+  padding: 5rem 5rem;
+  /* border: 12px solid black; */
+}
+.login-text {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 1rem;
+  width: 50%;
+}
+
+.login-form {
+  text-align: center;
+  width: 50%;
+}
+
+.form {
+  background-color: #fff;
+  border-radius: 0.5em;
+
+  padding: 2rem 2rem;
+  -webkit-box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+.form-control span {
+  height: 19.2px;
+  text-align: right;
+  font-size: 0.8rem;
+  margin-top: 0.5em;
+  font-style: italic;
+  color: var(--primary-red);
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.error-icon {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-100%);
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.terms {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--grayish-blue);
+  margin-top: 1em;
+}
+.terms span {
+  color: var(--primary-red);
+  font-weight: 800;
+}
+
+.success {
+  border: 2px solid green;
+}
+
+.errorform {
+  border: 2px solid var(--primary-red) !important;
+  color: var(--primary-red) !important;
+}
+.errorelement {
+  opacity: 1 !important;
+}
+
+@media (max-width: 1107px) {
+  main {
+    min-height: 100vh;
+    padding: 1em;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+
+  footer {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+  .login-form,
+  .login-text {
+    width: 100%;
+  }
+
+  .login-text {
+    text-align: center;
+    margin-top: 15em;
+    padding: 3em 0;
+  }
+
+  .login-wrap {
+    width: 100%;
+    flex-direction: column;
+    margin: auto;
+    padding: 0;
+  }
+  .price-bar {
+    padding: 1.2em 4em;
+  }
+  .form-control {
+    margin-bottom: 0.5em;
+  }
+  .form {
+    padding: 2em 1em;
+  }
+}
