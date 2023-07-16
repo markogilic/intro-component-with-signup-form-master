@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 - [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-intro-component-with-signup-form-PItP2QoJ-L)
-- [Live Page](https://markogilic.github.io/interactive-card-details-form-main/)
+- [Live Page](https://markogilic.github.io/intro-component-with-signup-form-master/)
 
 ## Author
 
